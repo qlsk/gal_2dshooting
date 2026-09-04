@@ -172,9 +172,33 @@ PrefabInstance:
       value: EnemySpawnerLeft
       objectReference: {fileID: 0}
     - target: {fileID: 4587704030919629790, guid: ea73b73271cfcd741bae03979f378796, type: 3}
+      propertyPath: _aimedPrefab
+      value: 
+      objectReference: {fileID: 1487037783566333505, guid: 3e4a179b123f62a43952e5e3b9b553fe, type: 3}
+    - target: {fileID: 4587704030919629790, guid: ea73b73271cfcd741bae03979f378796, type: 3}
       propertyPath: _enemyPrefab
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4587704030919629790, guid: ea73b73271cfcd741bae03979f378796, type: 3}
+      propertyPath: _homingPrefab
+      value: 
+      objectReference: {fileID: 8065714012138721814, guid: b71978aba8878874c850e8bac255c4ca, type: 3}
+    - target: {fileID: 4587704030919629790, guid: ea73b73271cfcd741bae03979f378796, type: 3}
+      propertyPath: _downwardPrefab
+      value: 
+      objectReference: {fileID: 154378158569581504, guid: 729b18e6338af1849ac6ee9f8b50d8ea, type: 3}
+    - target: {fileID: 4587704030919629790, guid: ea73b73271cfcd741bae03979f378796, type: 3}
+      propertyPath: _aimedEnemyPrefab
+      value: 
       objectReference: {fileID: 7121117573829585721, guid: 3e4a179b123f62a43952e5e3b9b553fe, type: 3}
+    - target: {fileID: 4587704030919629790, guid: ea73b73271cfcd741bae03979f378796, type: 3}
+      propertyPath: _homingEnemyPrefab
+      value: 
+      objectReference: {fileID: 1935869798895550287, guid: b71978aba8878874c850e8bac255c4ca, type: 3}
+    - target: {fileID: 4587704030919629790, guid: ea73b73271cfcd741bae03979f378796, type: 3}
+      propertyPath: _downwardEnemyPrefab
+      value: 
+      objectReference: {fileID: 2975156216262254898, guid: 729b18e6338af1849ac6ee9f8b50d8ea, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -759,7 +783,31 @@ PrefabInstance:
       value: EnemySpawner
       objectReference: {fileID: 0}
     - target: {fileID: 4587704030919629790, guid: ea73b73271cfcd741bae03979f378796, type: 3}
+      propertyPath: _aimedPrefab
+      value: 
+      objectReference: {fileID: 1487037783566333505, guid: 3e4a179b123f62a43952e5e3b9b553fe, type: 3}
+    - target: {fileID: 4587704030919629790, guid: ea73b73271cfcd741bae03979f378796, type: 3}
       propertyPath: _enemyPrefab
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4587704030919629790, guid: ea73b73271cfcd741bae03979f378796, type: 3}
+      propertyPath: _homingPrefab
+      value: 
+      objectReference: {fileID: 8065714012138721814, guid: b71978aba8878874c850e8bac255c4ca, type: 3}
+    - target: {fileID: 4587704030919629790, guid: ea73b73271cfcd741bae03979f378796, type: 3}
+      propertyPath: _downwardPrefab
+      value: 
+      objectReference: {fileID: 154378158569581504, guid: 729b18e6338af1849ac6ee9f8b50d8ea, type: 3}
+    - target: {fileID: 4587704030919629790, guid: ea73b73271cfcd741bae03979f378796, type: 3}
+      propertyPath: _aimedEnemyPrefab
+      value: 
+      objectReference: {fileID: 7121117573829585721, guid: 3e4a179b123f62a43952e5e3b9b553fe, type: 3}
+    - target: {fileID: 4587704030919629790, guid: ea73b73271cfcd741bae03979f378796, type: 3}
+      propertyPath: _homingEnemyPrefab
+      value: 
+      objectReference: {fileID: 1935869798895550287, guid: b71978aba8878874c850e8bac255c4ca, type: 3}
+    - target: {fileID: 4587704030919629790, guid: ea73b73271cfcd741bae03979f378796, type: 3}
+      propertyPath: _downwardEnemyPrefab
       value: 
       objectReference: {fileID: 2975156216262254898, guid: 729b18e6338af1849ac6ee9f8b50d8ea, type: 3}
     m_RemovedComponents: []
@@ -851,9 +899,33 @@ PrefabInstance:
       value: EnemySpawnerRight
       objectReference: {fileID: 0}
     - target: {fileID: 4587704030919629790, guid: ea73b73271cfcd741bae03979f378796, type: 3}
+      propertyPath: _aimedPrefab
+      value: 
+      objectReference: {fileID: 1487037783566333505, guid: 3e4a179b123f62a43952e5e3b9b553fe, type: 3}
+    - target: {fileID: 4587704030919629790, guid: ea73b73271cfcd741bae03979f378796, type: 3}
       propertyPath: _enemyPrefab
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4587704030919629790, guid: ea73b73271cfcd741bae03979f378796, type: 3}
+      propertyPath: _homingPrefab
+      value: 
+      objectReference: {fileID: 8065714012138721814, guid: b71978aba8878874c850e8bac255c4ca, type: 3}
+    - target: {fileID: 4587704030919629790, guid: ea73b73271cfcd741bae03979f378796, type: 3}
+      propertyPath: _downwardPrefab
+      value: 
+      objectReference: {fileID: 154378158569581504, guid: 729b18e6338af1849ac6ee9f8b50d8ea, type: 3}
+    - target: {fileID: 4587704030919629790, guid: ea73b73271cfcd741bae03979f378796, type: 3}
+      propertyPath: _aimedEnemyPrefab
+      value: 
+      objectReference: {fileID: 7121117573829585721, guid: 3e4a179b123f62a43952e5e3b9b553fe, type: 3}
+    - target: {fileID: 4587704030919629790, guid: ea73b73271cfcd741bae03979f378796, type: 3}
+      propertyPath: _homingEnemyPrefab
+      value: 
       objectReference: {fileID: 1935869798895550287, guid: b71978aba8878874c850e8bac255c4ca, type: 3}
+    - target: {fileID: 4587704030919629790, guid: ea73b73271cfcd741bae03979f378796, type: 3}
+      propertyPath: _downwardEnemyPrefab
+      value: 
+      objectReference: {fileID: 2975156216262254898, guid: 729b18e6338af1849ac6ee9f8b50d8ea, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -9,8 +9,14 @@ public class EnemySpawner : MonoBehaviour
 
     private float _timer;
 
+    private int[] spawnNumber = new int[10] { 0, 0, 0, 0, 0, 1, 1, 1, 2, 2 };
+
     // - 생성할 프리팹
-    [Header("스폰할 적 프리팹")][SerializeField] private Enemy _enemyPrefab;
+    [Header("downward 적 프리팹")][SerializeField] private Enemy _downwardEnemyPrefab;
+
+    [Header("aimed 적 프리팹")][SerializeField] private Enemy _aimedEnemyPrefab;
+
+    [Header("homing 적 프리팹")][SerializeField] private Enemy _homingEnemyPrefab;
 
     private void Start()
     {
@@ -31,7 +37,24 @@ public class EnemySpawner : MonoBehaviour
 
     private void Spawn()
     {
-        Enemy enemy = Instantiate(_enemyPrefab);
-        enemy.transform.position = transform.position;
+        int randomNumber = Random.Range(0, spawnNumber.Length);
+
+        Enemy enemy = null;
+
+        switch (spawnNumber[randomNumber])
+        {
+            case 0:
+                enemy = Instantiate(_downwardEnemyPrefab);
+                enemy.transform.position = transform.position;
+                break;
+            case 1:
+                enemy = Instantiate(_aimedEnemyPrefab);
+                enemy.transform.position = transform.position;
+                break;
+            case 2:
+                enemy = Instantiate(_homingEnemyPrefab);
+                enemy.transform.position = transform.position;
+                break;
+        }
     }
 }
