@@ -18,7 +18,6 @@ public class PlayerFire : MonoBehaviour
 
     private void Start()
     {
-        CoolTimer = CoolTime;
     }
 
     private void Update()
