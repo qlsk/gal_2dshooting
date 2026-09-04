@@ -3,6 +3,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public float MoveSpeed = 5f;
+    [SerializeField] private float _health = 100;
 
     private void Start()
     {
@@ -17,11 +18,23 @@ public class Enemy : MonoBehaviour
         transform.position += MoveSpeed * Time.deltaTime * dir;
     }
 
+    public void TakeDamage(int damage)
+    {
+        // 충돌 시 체력 감소
+        _health -= damage;
+        // 체력이 0 이하라면
+        if (_health <= 0)
+        {
+            // 제거
+            Destroy(gameObject);
+        }
+    }
+
     private void OnCollisionEnter2D(Collision2D coll)
     {
         if (coll.collider.tag == "Bullet")
         {
-            Destroy(gameObject);
+            TakeDamage(10);
 
             Destroy(coll.gameObject);
         }
