@@ -38,5 +38,11 @@ public class Enemy : MonoBehaviour
 
             Destroy(coll.gameObject);
         }
+        else if (coll.collider.tag == "SubBullet")
+        {
+            TakeDamage(5);
+
+            Destroy(coll.gameObject);
+        }
     }
 }
