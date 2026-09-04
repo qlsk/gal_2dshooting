@@ -13,6 +13,9 @@ public class PlayerFire : MonoBehaviour
     public float CoolTime = 0.6f;
     public float CoolTimer = 0;
 
+    // 자동 발사
+    public bool AutoFireMode = false;
+
     private void Start()
     {
         CoolTimer = CoolTime;
@@ -20,9 +23,19 @@ public class PlayerFire : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            AutoFireMode = true;
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            AutoFireMode = false;
+        }
+
         CoolTimer -= Time.deltaTime;
 
-        if (CoolTimer <= 0 && Input.GetButtonDown("Fire1"))
+        // 총알 발사 쿨타임이 돌아왔을때, Fire 버튼이 눌리거나 자동 공격 모드면
+        if (CoolTimer <= 0 && (Input.GetButtonDown("Fire1") || AutoFireMode))
         {
             Fire();
             CoolTimer = CoolTime;
@@ -32,12 +45,11 @@ public class PlayerFire : MonoBehaviour
     // 목표: 총알을 만들어서 발사하고 싶다.
     public void Fire()
     {
-        // 1. 발사 버튼을 누르면
-        // 2. 프리팹으로부터 총알 만들기
+        //  프리팹으로부터 총알 만들기
         GameObject rightBullet = Instantiate(BulletPrefab);
         GameObject leftBullet = Instantiate(BulletPrefab);
 
-        // 3. 총알 위치를 총구 위치로 바꾸기
+        // 총알 위치를 총구 위치로 바꾸기
         rightBullet.transform.position = RightFirePosition.transform.position;
         leftBullet.transform.position = LeftFirePosition.transform.position;
     }
