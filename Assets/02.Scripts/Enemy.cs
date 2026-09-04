@@ -17,10 +17,13 @@ public class Enemy : MonoBehaviour
         transform.position += MoveSpeed * Time.deltaTime * dir;
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnCollisionEnter2D(Collision2D coll)
     {
-        Destroy(gameObject);
+        if (coll.collider.tag == "Bullet")
+        {
+            Destroy(gameObject);
 
-        Destroy(other.gameObject);
+            Destroy(coll.gameObject);
+        }
     }
 }
