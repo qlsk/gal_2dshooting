@@ -16,10 +16,10 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
+  - DestroyZone
+  - Player
+  - Bullet
+  - Enemy
   - 
   - 
   - 
