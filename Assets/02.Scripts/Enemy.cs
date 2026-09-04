@@ -2,8 +2,9 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public float MoveSpeed = 5f;
-    [SerializeField] private float _health = 10f;
+    [SerializeField] private int _health = 10;
+    [SerializeField] private float _moveSpeed;
+    [SerializeField] private float _damage;
 
     private void Start()
     {
@@ -15,7 +16,7 @@ public class Enemy : MonoBehaviour
         Vector3 dir = Vector3.down;
 
         // 2. 이동한다.
-        transform.position += MoveSpeed * Time.deltaTime * dir;
+        transform.position += _moveSpeed * Time.deltaTime * dir;
     }
 
     public void TakeDamage(int damage)
@@ -28,5 +29,12 @@ public class Enemy : MonoBehaviour
             // 제거
             Destroy(gameObject);
         }
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (!other.gameObject.CompareTag("Player")) return;
+        Player player = other.gameObject.GetComponent<Player>();
+        player.TakeDamage(1);
     }
 }
