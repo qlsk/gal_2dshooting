@@ -29,20 +29,4 @@ public class Enemy : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
-    private void OnCollisionEnter2D(Collision2D coll)
-    {
-        if (coll.collider.tag == "Bullet")
-        {
-            TakeDamage(10);
-
-            Destroy(coll.gameObject);
-        }
-        else if (coll.collider.tag == "SubBullet")
-        {
-            TakeDamage(5);
-
-            Destroy(coll.gameObject);
-        }
-    }
 }
