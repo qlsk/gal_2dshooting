@@ -242,7 +242,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 828072012}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &429537856
 MonoBehaviour:
@@ -257,7 +257,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
   MoveSpeed: 5
-  _health: 100
+  _health: 10
 --- !u!50 &429537858
 Rigidbody2D:
   serializedVersion: 5
@@ -631,7 +631,7 @@ GameObject:
   - component: {fileID: 828072018}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -712,7 +712,6 @@ Transform:
   - {fileID: 353449507}
   - {fileID: 674064119}
   - {fileID: 768973322}
-  - {fileID: 429537854}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &828072013
@@ -865,3 +864,4 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 619394802}
   - {fileID: 828072012}
+  - {fileID: 429537854}

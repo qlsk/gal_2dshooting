@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8114927405893497724}
   - component: {fileID: 6857304557637241656}
   - component: {fileID: 7072843618172977191}
-  - component: {fileID: -1561731036167398212}
+  - component: {fileID: 1764927997889116089}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Bullet
@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bullet
   Speed: 5
---- !u!61 &-1561731036167398212
+--- !u!61 &1764927997889116089
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
