@@ -6,6 +6,10 @@ public class Enemy : MonoBehaviour
     [SerializeField] protected float _moveSpeed;
     [SerializeField] protected float _damage;
 
+    [SerializeField] Item _itemMoveSpeedUp;
+    [SerializeField] Item _itemHealthUp;
+    [SerializeField] Item _itemFireSpeedUp;
+
     private void Start()
     {
     }
@@ -26,6 +30,29 @@ public class Enemy : MonoBehaviour
         // 체력이 0 이하라면
         if (_health <= 0)
         {
+            // 30퍼 확률로 아이템 생성
+            int itemSpawnRandom = Random.Range(0, 100);
+            if (itemSpawnRandom <= 30)
+            {
+                int whichItemSpawn = Random.Range(0, 4);
+
+                // 아이템 3개 중 하나 스폰
+                switch (whichItemSpawn)
+                {
+                    case 0:
+                        Instantiate(_itemFireSpeedUp);
+                        _itemFireSpeedUp.transform.position = transform.position; 
+                        break;
+                    case 1:
+                        Instantiate(_itemHealthUp);
+                        _itemHealthUp.transform.position = transform.position;
+                        break;
+                    case 2:
+                        Instantiate(_itemMoveSpeedUp);
+                        _itemMoveSpeedUp.transform.position = transform.position;
+                        break;
+                }
+            }
             // 제거
             Destroy(gameObject);
         }

@@ -47,4 +47,9 @@ public class PlayerMove : MonoBehaviour
             Speed++;
         }
     }
+    
+    public void MoveSpeedUp()
+    {
+        Speed++;
+    }
 }

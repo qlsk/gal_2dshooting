@@ -52,4 +52,13 @@ public class PlayerFire : MonoBehaviour
         rightBullet.transform.position = RightFirePosition.transform.position;
         leftBullet.transform.position = LeftFirePosition.transform.position;
     }
+
+    public void FireSpeedUp()
+    {
+        if (CoolTime > 0)
+        {
+            CoolTime -= 0.1f;
+        }
+    }
+    
 }
