@@ -55,9 +55,10 @@ public class PlayerFire : MonoBehaviour
 
     public void FireSpeedUp()
     {
-        if (CoolTime > 0)
+        CoolTime -= 0.1f;
+        if (CoolTime <= 0)
         {
-            CoolTime -= 0.1f;
+            CoolTime = 0.1f;
         }
     }
     

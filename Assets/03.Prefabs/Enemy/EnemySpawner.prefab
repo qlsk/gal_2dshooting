@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2105771849636071709}
   - component: {fileID: 4587704030919629790}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: EnemySpawner
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
@@ -45,4 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawner
   _spawnInterval: 3
-  _enemyPrefab: {fileID: 0}
+  _downwardEnemyPrefab: {fileID: 0}
+  _aimedEnemyPrefab: {fileID: 0}
+  _homingEnemyPrefab: {fileID: 0}
