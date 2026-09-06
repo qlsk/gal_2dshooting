@@ -51,7 +51,7 @@ public class Enemy : MonoBehaviour
         int itemSpawnRandom = Random.Range(0, 100);
         if (itemSpawnRandom <= 100)
         {
-            int whichItemSpawn = Random.Range(0, 4);
+            int whichItemSpawn = Random.Range(0, 3);
 
             // 아이템 3개 중 하나 스폰
             switch (whichItemSpawn)
