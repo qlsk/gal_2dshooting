@@ -52,21 +52,21 @@ public class Enemy : MonoBehaviour
         if (itemSpawnRandom <= 100)
         {
             int whichItemSpawn = Random.Range(0, 3);
-
+            Item item = null;
             // 아이템 3개 중 하나 스폰
             switch (whichItemSpawn)
             {
                 case 0:
-                    Instantiate(_itemFireSpeedUp);
-                    _itemFireSpeedUp.transform.position = transform.position;
+                    item = Instantiate(_itemFireSpeedUp);
+                    item.transform.position = transform.position;
                     break;
                 case 1:
-                    Instantiate(_itemHealthUp);
-                    _itemHealthUp.transform.position = transform.position;
+                    item = Instantiate(_itemHealthUp);
+                    item.transform.position = transform.position;
                     break;
                 case 2:
-                    Instantiate(_itemMoveSpeedUp);
-                    _itemMoveSpeedUp.transform.position = transform.position;
+                    item = Instantiate(_itemMoveSpeedUp);
+                    item.transform.position = transform.position;
                     break;
             }
         }
