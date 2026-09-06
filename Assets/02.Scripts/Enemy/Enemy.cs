@@ -9,6 +9,8 @@ public class Enemy : MonoBehaviour
     [SerializeField] Item _itemMoveSpeedUp;
     [SerializeField] Item _itemHealthUp;
     [SerializeField] Item _itemFireSpeedUp;
+    private bool isDead = false;
+
 
     private void Start()
     {
@@ -27,34 +29,46 @@ public class Enemy : MonoBehaviour
     {
         // 충돌 시 체력 감소
         _health -= damage;
+        if (isDead)
+        {
+            return;
+        }
+
         // 체력이 0 이하라면
         if (_health <= 0)
         {
-            // 30퍼 확률로 아이템 생성
-            int itemSpawnRandom = Random.Range(0, 100);
-            if (itemSpawnRandom <= 30)
-            {
-                int whichItemSpawn = Random.Range(0, 4);
-
-                // 아이템 3개 중 하나 스폰
-                switch (whichItemSpawn)
-                {
-                    case 0:
-                        Instantiate(_itemFireSpeedUp);
-                        _itemFireSpeedUp.transform.position = transform.position; 
-                        break;
-                    case 1:
-                        Instantiate(_itemHealthUp);
-                        _itemHealthUp.transform.position = transform.position;
-                        break;
-                    case 2:
-                        Instantiate(_itemMoveSpeedUp);
-                        _itemMoveSpeedUp.transform.position = transform.position;
-                        break;
-                }
-            }
+            isDead = true;
+            SpawnItem();
+            Debug.Log("제거");
             // 제거
             Destroy(gameObject);
+        }
+    }
+
+    public void SpawnItem()
+    {
+        // 30퍼 확률로 아이템 생성
+        int itemSpawnRandom = Random.Range(0, 100);
+        if (itemSpawnRandom <= 100)
+        {
+            int whichItemSpawn = Random.Range(0, 4);
+
+            // 아이템 3개 중 하나 스폰
+            switch (whichItemSpawn)
+            {
+                case 0:
+                    Instantiate(_itemFireSpeedUp);
+                    _itemFireSpeedUp.transform.position = transform.position;
+                    break;
+                case 1:
+                    Instantiate(_itemHealthUp);
+                    _itemHealthUp.transform.position = transform.position;
+                    break;
+                case 2:
+                    Instantiate(_itemMoveSpeedUp);
+                    _itemMoveSpeedUp.transform.position = transform.position;
+                    break;
+            }
         }
     }
 
