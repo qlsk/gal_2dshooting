@@ -20,8 +20,11 @@ public class ItemFireSpeedUp : Item
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            PlayerFire playerFire = other.gameObject.GetComponent<PlayerFire>();
-            playerFire.FireSpeedUp();
+            PlayerFire[] playerFire = other.gameObject.GetComponents<PlayerFire>();
+            foreach (PlayerFire pf in playerFire)
+            {
+                pf.FireSpeedUp();
+            }
             Destroy(gameObject);
         }
     }
