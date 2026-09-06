@@ -39,7 +39,6 @@ public class Enemy : MonoBehaviour
         {
             isDead = true;
             SpawnItem();
-            Debug.Log("제거");
             // 제거
             Destroy(gameObject);
         }
